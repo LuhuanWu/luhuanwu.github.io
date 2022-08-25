@@ -1,82 +1,129 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+#@string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
+@inproceedings{wu2022variational,
+  title={Variational Nearest Neighbor Gaussian Process},
+  author={Wu, Luhuan and Pleiss, Geoff and Cunningham, John},
+  booktitle={International Conference on Machine Learning},
+  pages={24114-24130},
+  year={2022},
+  organization={PMLR},
+
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation,},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics,},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers,}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.,},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
+  abstract={Variational approximations to Gaussian processes (GPs) typically use a small set of inducing points to form a low-rank approximation to the covariance matrix. In this work, we instead exploit a sparse approximation of the precision matrix. We propose variational nearest neighbor Gaussian process (VNNGP), which introduces a prior that only retains correlations within 𝐾 nearest-neighboring observations, thereby inducing sparse precision structure. Using the variational framework, VNNGP’s objective can be factorized over both observations and inducing points, enabling stochastic optimization with a time complexity of 𝑂(𝐾3). Hence, we can arbitrarily scale the inducing point size, even to the point of putting inducing points at every observed location. We compare VNNGP to other scalable GPs through various experiments, and demonstrate that VNNGP (1) can dramatically outperform low-rank methods, and (2) is less prone to overfitting than other nearest neighbor methods.},
+  preview={vnngp-thumbnail.png}, 
+  pdf={https://arxiv.org/pdf/2202.01694.pdf},
+  code={https://docs.gpytorch.ai/en/v1.8.0/examples/04_Variational_and_Approximate_GPs/VNNGP.html},
   selected={true}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik,},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
+@inproceedings{potapczynski2021bias,
+  title={Bias-free scalable gaussian processes via randomized truncations},
+  author={Potapczynski, Andres and Wu, Luhuan and Biderman, Dan and Pleiss, Geoff and Cunningham, John P},
+  booktitle={International Conference on Machine Learning},
+  pages={8609--8619},
+  year={2021},
+  organization={PMLR},
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.,},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@book{przibram1967letters,
   bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+  abstract={Scalable Gaussian Process methods are computationally attractive, yet introduce modeling biases that require rigorous study. This paper analyzes two common techniques:
+    early truncated conjugate gradients (CG) and random Fourier features (RFF). We find that both methods introduce a systematic bias on the learned hyperparameters:
+      CG tends to underfit while RFF tends to overfit. We address these issues using randomized truncation estimators that eliminate bias in exchange for increased variance. In the case of RFF, we show that the bias-to-variance conversion is indeed a trade-off:
+        the additional variance proves detrimental to optimization. However, in the case of CG, our unbiased learning procedure meaningfully outperforms its biased counterpart with minimal additional computation. Our code is available at https://github.com/ cunningham-lab/RTGPS.},
+  preview={RRGP-ICML-thumbnail.png},
+  code={https://github.com/cunningham-lab/RTGPS},
+  pdf={https://arxiv.org/abs/2102.06695},
+  talk={https://icml.cc/virtual/2021/poster/10577},
+  slides={https://icml.cc/media/icml-2021/Slides/10577.pdf},
+  selected={true}
+}
+
+@inproceedings{wu2021hierarchical,
+  title={Hierarchical Inducing Point Gaussian Process for Inter-domian Observations},
+  author={Wu, Luhuan and Miller, Andrew and Anderson, Lauren and Pleiss, Geoff and Blei, David and Cunningham, John},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={2926--2934},
+  year={2021},
+  organization={PMLR},
+
+  bibtex_show={true},
+  abstract={We examine the general problem of inter-domain Gaussian Processes (GPs): problems where the GP realization and the noisy observations of that realization lie on different domains. When the mapping between those domains is linear, such as integration or diﬀerentiation, inference is still closed form. However, many of the scaling and approximation techniques that our community has developed do not apply to this setting. In this work, we introduce the hierarchical inducing point GP (HIP-GP), a scalable inter-domain GP inference method that enables us to improve the approximation accuracy by increasing the number of inducing points to the millions. HIP-GP, which relies on inducing points with grid structure and a stationary kernel assumption, is suitable for low-dimensional problems. In developing HIP-GP, we introduce (1) a fast whitening strategy, and (2) a novel preconditioner for conjugate gradients which can be helpful in general GP settings.},
+  preview={hipgp-aistats-thumbnail.png},
+  pdf={https://arxiv.org/pdf/2103.00393.pdf},
+  code={https://github.com/cunningham-lab/hipgp},
+  talk={https://slideslive.com/38953216/hipgp-hierarchical-inducing-point-gaussian-process-for-interdomian-observations?ref=speaker-31741},
+  selected={true}
+}
+
+
+@incollection{khalil2020variational,
+  title={Variational objectives for markovian dynamics with backward simulation},
+  author={Khalil Moretti, Antonio and Wang, Zizhao and Wu, Luhuan and Drori, Iddo and Pe’er, Itsik},
+  booktitle={ECAI 2020},
+  pages={1371--1378},
+  year={2020},
+  publisher={IOS Press},
+
+  bibtex_show={true},
+  abstract={Sequential Monte Carlo (SMC) and Variational Inference (VI) are two families of approximate inference algorithms for Bayesian latent variable models. A body of recent work has focused on constructing a variational family of filtered distributions using SMC. Inspired by this work, we introduce Particle Smoothing Variational Objectives (SVO), a novel backward simulation technique and variational objective constructed from a smoothed approximate posterior. Our method sub-samples auxiliary random variables to enhance the support of the proposal distribution and increase particle diversity. We demonstrate our approach on three benchmark latent nonlinear dynamical systems tasks. SVO consistently outperforms filtered objectives when given fewer Monte Carlo samples.},
+  preview={ecai-lorenz.gif},
+  code={https://github.com/amoretti86/PSVO},
+  pdf={https://ecai2020.eu/papers/905_paper.pdf},
+  selected={true}
+}
+
+
+@inproceedings{bidermaninverse,
+  title={Inverse articulated-body dynamics from video via variational sequential Monte Carlo},
+  author={Biderman, Dan and Naesseth, Christian A and Wu, Luhuan and Abe, Taiga and Mosberger, Alice C and Sibener, Leslie J and Costa, Rui and Murray, James and Cunningham, John P},
+  booktitle={NeurIPS Workshop on Differentiable Vision, Graphics, and Physics in Machine Learning},
+  year={2020},
+
+  abstract={Convolutional neural networks for pose estimation are continuously improving in
+identifying joints of moving agents from video. However, state-of-the-art algorithms offer no insight into the underlying mechanics of articulated limbs. "Seeing"
+the mechanics of movement is of major importance for fields like neuroscience,
+studying how the brain controls movement, and engineering, e.g., using vision to
+correct for errors in the action of a robotic manipulator. In the pipeline proposed
+here, we use a convolutional network to track joint positions, and embed these
+as the joints of a linked robotic manipulator. We develop a probabilistic physical
+model whose states specify second-order rigid-body dynamics and the torques
+applied to each actuator. Observations are generated by mapping the joint angles
+through the forward kinematics function to Cartesian coordinates. For nonlinear
+state estimation and parameter learning, we build on variational Sequential Monte
+Carlo (SMC), a differentiable variant of the classical SMC method leveraging
+variational inference. We extend with a distributed nested SMC algorithm, which,
+at inference time, wraps multiple independent SMC samplers within an outer-level
+importance sampler. We extract mechanical quantities from simulated data and
+newly acquired videos of mice and humans, offering a novel tool for studying e.g.
+biological motor control.},
+  preview={inverse-body-dynamics.gif},
+  pdf={https://montrealrobotics.ca/diffcvgp/assets/papers/2.pdf},
+  talk={https://slideslive.at/38942626/inverse-articulatedbody-dynamics-from-video-via-variational-sequential-montecarlo?ref=speaker-54083-latest},
+  selected={false}
+}
+
+
+@article{moretti2019smoothing,
+  bibtex_show={true},
+  title={Smoothing nonlinear variational objectives with sequential monte carlo},
+  author={Moretti, Antonio and Wang, Zizhao and Wu, Luhuan and Pe'er, Itsik},
+  year={2019},
+  booktitle={ICLR Workshop on Deep Generative Models for Highly Structured Data},
+
+  abstract={The task of recovering nonlinear dynamics and latent structure from a population recording is a challenging problem in statistical neuroscience motivating the
+development of novel techniques in time series analysis. Recent work has focused on connections between Variational Inference and Sequential Monte Carlo
+for performing inference and parameter estimation on sequential data. Inspired by
+this work, we present a framework to develop Smoothed Variational Objectives
+(SVOs) that condition proposal distributions on the full time-ordered sequence
+of observations. SVO maintains both expressiveness and tractability by sharing
+parameters of the transition function between the proposal and target. We apply
+the method to several dimensionality reduction/expansion tasks and examine the
+dynamics learned with a quantitative metric. SVO performs favorably against the
+state of the art.},
+  preview={iclr-fhn.gif},
+  code={https://github.com/amoretti86/PSVO},
+  pdf={https://openreview.net/pdf?id=HJg24U8tuE},
+  selected={false}
 }

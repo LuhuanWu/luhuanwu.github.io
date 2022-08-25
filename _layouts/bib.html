@@ -55,7 +55,7 @@
                 {%- endif -%}
               {%- endfor -%}
             {%- endif -%}
-            
+
             {%- if forloop.length > 1 -%}
               {%- if forloop.first == false -%},&nbsp;{%- endif -%}
               {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
@@ -71,7 +71,7 @@
             {%- endif -%}
           {%- endfor -%}
           {%- assign more_authors = author_array_size | minus: author_array_limit -%}
-          
+
           {%- assign more_authors_hide = more_authors | append: " more author" -%}
           {%- if more_authors > 0 -%}
             {%- if more_authors > 1 -%}
@@ -124,7 +124,7 @@
             {{ periodical | strip }}
           </div>
         {%- endif %}
-        
+
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.abstract %}
@@ -164,6 +164,13 @@
             <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
             {%- else -%}
             <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+            {%- endif %}
+          {%- endif %}
+          {%- if entry.talk %}
+            {% if entry.talk contains '://' -%}
+            <a href="{{ entry.talk }}" class="btn btn-sm z-depth-0" role="button">Talk</a>
+            {%- else -%}
+            <a href="{{ entry.talk | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Talk</a>
             {%- endif %}
           {%- endif %}
           {%- if entry.slides %}

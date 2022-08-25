@@ -2,24 +2,26 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: New York, NY
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: LuhuanWu_photo.jpg
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
+  #address: >
+  #  <p>New York, NY, US</p>
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi, I am a second-year PhD student in Statistics at <a href="https://www.columbia.edu/">Columbia University</a>,
+where I am very fortunate to work with Prof. <a href="https://stat.columbia.edu/~cunningham/">John Cunningham</a>. and Prof. <a href="http://www.cs.columbia.edu/~blei/index.html">David Blei</a>. Previously, I received my master's degree in Data Science at Columbia University, supervised by Prof. John Cunningham and Prof. <a href="http://www.cs.columbia.edu/~itsik/">Itsik Pe'er</a>. I received my bachelor's degree in Mathematics at <a href="https://www.nju.edu.cn/en/main.psp">Nanjing University</a>.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+__Research Interests__: I have broad research interests in machine learning and statistics. My recent focus has been: 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+• Probabilistic Machine Learning: latent variable models, deep generative models, variational inference
+
+• Uncertainty Quantification: Bayesian modeling, conformal prediction
+
+• Causal Inference: invariant prediction, out-of-distribution generalization
