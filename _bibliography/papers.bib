@@ -13,7 +13,7 @@
 
   bibtex_show={true},
   abstract={Variational approximations to Gaussian processes (GPs) typically use a small set of inducing points to form a low-rank approximation to the covariance matrix. In this work, we instead exploit a sparse approximation of the precision matrix. We propose variational nearest neighbor Gaussian process (VNNGP), which introduces a prior that only retains correlations within 𝐾 nearest-neighboring observations, thereby inducing sparse precision structure. Using the variational framework, VNNGP’s objective can be factorized over both observations and inducing points, enabling stochastic optimization with a time complexity of 𝑂(𝐾3). Hence, we can arbitrarily scale the inducing point size, even to the point of putting inducing points at every observed location. We compare VNNGP to other scalable GPs through various experiments, and demonstrate that VNNGP (1) can dramatically outperform low-rank methods, and (2) is less prone to overfitting than other nearest neighbor methods.},
-  preview={vnngp-thumbnail.png}, 
+  preview={vnngp-thumbnail.png},
   pdf={https://arxiv.org/pdf/2202.01694.pdf},
   code={https://docs.gpytorch.ai/en/v1.8.0/examples/04_Variational_and_Approximate_GPs/VNNGP.html},
   selected={true}
@@ -105,7 +105,7 @@ biological motor control.},
 }
 
 
-@article{moretti2019smoothing,
+@inproceedings{moretti2019smoothing,
   bibtex_show={true},
   title={Smoothing nonlinear variational objectives with sequential monte carlo},
   author={Moretti, Antonio and Wang, Zizhao and Wu, Luhuan and Pe'er, Itsik},
