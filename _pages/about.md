@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi, I am a second-year PhD student in Statistics at <a href="https://www.columbia.edu/">Columbia University</a>,
+Hi, I am a third-year PhD student in Statistics at <a href="https://www.columbia.edu/">Columbia University</a>,
 where I am very fortunate to work with Prof. <a href="https://stat.columbia.edu/~cunningham/">John Cunningham</a>. and Prof. <a href="http://www.cs.columbia.edu/~blei/index.html">David Blei</a>. Previously, I received my master's degree in Data Science at Columbia University, supervised by Prof. John Cunningham and Prof. <a href="http://www.cs.columbia.edu/~itsik/">Itsik Pe'er</a>. I received my bachelor's degree in Mathematics at <a href="https://www.nju.edu.cn/en/main.psp">Nanjing University</a>.
 
 __Research Interests__: I have broad research interests in machine learning and statistics. My recent focus has been:

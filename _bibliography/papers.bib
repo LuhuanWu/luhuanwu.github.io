@@ -15,7 +15,8 @@
   abstract={Variational approximations to Gaussian processes (GPs) typically use a small set of inducing points to form a low-rank approximation to the covariance matrix. In this work, we instead exploit a sparse approximation of the precision matrix. We propose variational nearest neighbor Gaussian process (VNNGP), which introduces a prior that only retains correlations within 𝐾 nearest-neighboring observations, thereby inducing sparse precision structure. Using the variational framework, VNNGP’s objective can be factorized over both observations and inducing points, enabling stochastic optimization with a time complexity of 𝑂(𝐾3). Hence, we can arbitrarily scale the inducing point size, even to the point of putting inducing points at every observed location. We compare VNNGP to other scalable GPs through various experiments, and demonstrate that VNNGP (1) can dramatically outperform low-rank methods, and (2) is less prone to overfitting than other nearest neighbor methods.},
   preview={vnngp-thumbnail.png},
   pdf={https://arxiv.org/pdf/2202.01694.pdf},
-  code={https://docs.gpytorch.ai/en/v1.8.0/examples/04_Variational_and_Approximate_GPs/VNNGP.html},
+  talk={https://slideslive.com/38983939/vnngp-variational-nearest-neighbor-gaussian-process}, 
+  code={https://docs.gpytorch.ai/en/latest/examples/04_Variational_and_Approximate_GPs/VNNGP.html},
   selected={true}
 }
 
@@ -58,10 +59,10 @@
 }
 
 
-@incollection{khalil2020variational,
+@inproceedings{khalil2020variational,
   title={Variational Objectives for Markovian Dynamics with Backward Simulation},
   author={Khalil Moretti, Antonio and Wang, Zizhao and Wu, Luhuan and Drori, Iddo and Pe’er, Itsik},
-  booktitle={ECAI 2020},
+  booktitle={ European Conference on Artificial Intelligence},
   pages={1371--1378},
   year={2020},
   publisher={IOS Press},
