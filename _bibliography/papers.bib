@@ -3,6 +3,24 @@
 
 #@string{aps = {American Physical Society,}}
 
+@inproceedings{wu2023tds,
+  title={Practical and Asymptotically Exact Conditional Sampling in Diffusion Models},
+  author={Wu, Luhuan Wu, and Trippe, Brian, and Naesseth, Christian and Blei, David and Cunningham, John},
+  booktitle={Conference on Neural Information Processing Systems},
+#  pages={24114-24130},
+  year={2023},
+#  organization={PMLR},
+
+  bibtex_show={true},
+  abstract={Diffusion models have been successful on a range of conditional generation tasks including molecular design and text-to-image generation. However, these achievements have primarily depended on task-specific conditional training or error-prone heuristic approximations. Ideally, a conditional generation method should provide exact samples for a broad range of conditional distributions without requiring task-specific training. To this end, we introduce the Twisted Diffusion Sampler, or TDS. TDS is a sequential Monte Carlo (SMC) algorithm that targets the conditional distributions of diffusion models. The main idea is to use twisting, an SMC technique that enjoys good computational efficiency, to incorporate heuristic approximations without compromising asymptotic exactness. We first find in simulation and on MNIST image inpainting and class-conditional generation tasks that TDS provides a computational statistical trade-off, yielding more accurate approximations with many particles but with empirical improvements over heuristics with as few as two particles. We then turn to motif-scaffolding, a core task in protein design, using a TDS extension to Riemannian diffusion models. On benchmark test cases, TDS allows flexible conditioning criteria and often outperforms the state of the art.},
+  preview={TDS-neurips2023-thumbnail.png},
+  pdf={https://arxiv.org/abs/2306.17775},
+#  talk={https://slideslive.com/38983939/vnngp-variational-nearest-neighbor-gaussian-process},
+#  code={https://docs.gpytorch.ai/en/latest/examples/04_Variational_and_Approximate_GPs/VNNGP.html},
+  selected={true}
+}
+
+
 @inproceedings{wu2022variational,
   title={Variational Nearest Neighbor Gaussian Process},
   author={Wu, Luhuan and Pleiss, Geoff and Cunningham, John},
@@ -15,7 +33,7 @@
   abstract={Variational approximations to Gaussian processes (GPs) typically use a small set of inducing points to form a low-rank approximation to the covariance matrix. In this work, we instead exploit a sparse approximation of the precision matrix. We propose variational nearest neighbor Gaussian process (VNNGP), which introduces a prior that only retains correlations within 𝐾 nearest-neighboring observations, thereby inducing sparse precision structure. Using the variational framework, VNNGP’s objective can be factorized over both observations and inducing points, enabling stochastic optimization with a time complexity of 𝑂(𝐾3). Hence, we can arbitrarily scale the inducing point size, even to the point of putting inducing points at every observed location. We compare VNNGP to other scalable GPs through various experiments, and demonstrate that VNNGP (1) can dramatically outperform low-rank methods, and (2) is less prone to overfitting than other nearest neighbor methods.},
   preview={vnngp-thumbnail.png},
   pdf={https://arxiv.org/pdf/2202.01694.pdf},
-  talk={https://slideslive.com/38983939/vnngp-variational-nearest-neighbor-gaussian-process}, 
+  talk={https://slideslive.com/38983939/vnngp-variational-nearest-neighbor-gaussian-process},
   code={https://docs.gpytorch.ai/en/latest/examples/04_Variational_and_Approximate_GPs/VNNGP.html},
   selected={true}
 }
