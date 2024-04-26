@@ -3,6 +3,23 @@
 
 #@string{aps = {American Physical Society,}}
 
+@inproceedings{wu2024posterior,
+  title={Posterior Uncertainty Quantification in Neural Networks using Data Augmentation},
+  author={Wu, Luhuan and Williamson, Sinead A},
+  booktitle={International Conference on Artificial Intelligence and Statistics},
+  pages={3376--3384},
+  year={2024},
+  organization={PMLR},
+
+  bibtex_show={true},
+  abstract={In this paper, we approach the problem of uncertainty quantification in deep learning through a predictive framework, which captures uncertainty in model parameters by specifying our assumptions about the predictive distribution of unseen future data. Under this view, we show that deep ensembling (Lakshminarayanan et al., 2017) is a fundamentally mis-specified model class, since it assumes that future data are supported on existing observations only -- a situation rarely encountered in practice. To address this limitation, we propose MixupMP, a method that constructs a more realistic predictive distribution using popular data augmentation techniques. MixupMP operates as a drop-in replacement for deep ensembles, where each ensemble member is trained on a random simulation from this predictive distribution. Grounded in the recently-proposed framework of Martingale posteriors (Fong et al., 2023), MixupMP returns samples from an implicitly defined Bayesian posterior. Our empirical analysis showcases that MixupMP achieves superior predictive performance and uncertainty quantification on various image classification datasets, when compared with existing Bayesian and non-Bayesian approaches.},
+  preview={aistats-posterior-uncertainty.png},
+  code={https://github.com/apple/ml-MixupMP},
+  pdf={https://arxiv.org/abs/2403.12729},
+  selected={true}
+}
+
+
 @inproceedings{wu2023tds,
   title={Practical and Asymptotically Exact Conditional Sampling in Diffusion Models},
   author={Wu, Luhuan Wu, and Trippe, Brian, and Naesseth, Christian and Blei, David and Cunningham, John},
