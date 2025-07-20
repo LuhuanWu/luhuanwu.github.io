@@ -4,9 +4,9 @@
 
 title: "Luhuan Wu" # the website title (if blank, full name will be used instead)
 first_name: Luhuan
-middle_name: 
+middle_name:
 last_name: Wu
-contact_note: "" 
+contact_note: ""
 description: ""
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -111,7 +111,6 @@ giscus:
   theme: preferred_color_scheme # name of the color scheme (preferred works well with al-folio light/dark mode)
   emit_metadata: 0
   lang: en
-
 
 # -----------------------------------------------------------------------------
 # Newsletter
