@@ -34,7 +34,8 @@ body.sticky-bottom-footer {
 // Profile
 .profile {
   img {
-    width: 100%;
+    width: 200px; // Set desired width
+    height: auto; // Maintain aspect ratio
   }
 }
 
