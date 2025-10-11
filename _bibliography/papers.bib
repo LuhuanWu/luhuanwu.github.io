@@ -3,6 +3,35 @@
 
 #@string{aps = {American Physical Society,}}
 
+
+@inproceedings{wu2025reverse,
+  title={Reverse Diffusion Sequential Monte Carlo for Sampling from Unnormalized Distributions},
+  author={Wu, Luhuan and Yi, Han and Naesseth, Christian and Cunningham, John},
+  booktitle={Conference on Neural Information Processing Systems},
+  year={2025},
+
+  bibtex_show={true},
+  abstract={We propose a novel sequential Monte Carlo (SMC) method for sampling from unnormalized target distributions based on a reverse denoising diffusion process. While recent diffusion-based samplers simulate the reverse diffusion using approximate score functions, they can suffer from accumulating errors due to time discretization and imperfect score estimation. In this work, we introduce a principled SMC framework that formalizes diffusion-based samplers as proposals while systematically correcting for their biases. The core idea is to construct informative intermediate target distributions that progressively steer the sampling trajectory toward the final target distribution. Although ideal intermediate targets are intractable, we develop exact approximations using quantities from the score estimation-based proposal, without requiring additional model training or inference overhead. The resulting sampler, termed RDSMC, enables consistent sampling and unbiased estimation of the target's normalization constant under mild conditions. We demonstrate the effectiveness of our method on a range of synthetic targets and real-world Bayesian inference problems.},
+  pdf={https://arxiv.org/abs/2508.05926},
+  selected={true}
+}
+
+@misc{wu2025bayesian,
+  title={Bayesian Invariance Modeling of Multi-Environment Data},
+  author={Wu, Luhuan and Yin, Mingzhang and Wang, Yixin and Cunningham, John and Blei, David},
+  eprint={2506.22675},
+  archivePrefix={arXiv}, 
+  year={2025},
+  primaryClass={stat.ML}, 
+  arxiv={2506.22675},
+  additional_info={arXiv preprint},
+
+  bibtex_show={true},
+  abstract={Invariant prediction [Peters et al., 2016] analyzes feature/outcome data from multiple environments to identify invariant features - those with a stable predictive relationship to the outcome. Such features support generalization to new environments and help reveal causal mechanisms. Previous methods have primarily tackled this problem through hypothesis testing or regularized optimization. Here we develop Bayesian Invariant Prediction (BIP), a probabilistic model for invariant prediction. BIP encodes the indices of invariant features as a latent variable and recover them by posterior inference. Under the assumptions of Peters et al. [2016], the BIP posterior targets the true invariant features. We prove that the posterior is consistent and that greater environment heterogeneity leads to faster posterior contraction. To handle many features, we design an efficient variational approximation called VI-BIP. In simulations and real data, we find that BIP and VI-BIP are more accurate and scalable than existing methods for invariant prediction.},
+  pdf={https://arxiv.org/abs/2506.22675},
+  selected={true}
+}
+
 @inproceedings{wu2024posterior,
   title={Posterior Uncertainty Quantification in Neural Networks using Data Augmentation},
   author={Wu, Luhuan and Williamson, Sinead A},
@@ -45,7 +74,7 @@
   organization={PMLR},
 
   bibtex_show={true},
-  abstract={Variational approximations to Gaussian processes (GPs) typically use a small set of inducing points to form a low-rank approximation to the covariance matrix. In this work, we instead exploit a sparse approximation of the precision matrix. We propose variational nearest neighbor Gaussian process (VNNGP), which introduces a prior that only retains correlations within 𝐾 nearest-neighboring observations, thereby inducing sparse precision structure. Using the variational framework, VNNGP’s objective can be factorized over both observations and inducing points, enabling stochastic optimization with a time complexity of 𝑂(𝐾3). Hence, we can arbitrarily scale the inducing point size, even to the point of putting inducing points at every observed location. We compare VNNGP to other scalable GPs through various experiments, and demonstrate that VNNGP (1) can dramatically outperform low-rank methods, and (2) is less prone to overfitting than other nearest neighbor methods.},
+  abstract={Variational approximations to Gaussian processes (GPs) typically use a small set of inducing points to form a low-rank approximation to the covariance matrix. In this work, we instead exploit a sparse approximation of the precision matrix. We propose variational nearest neighbor Gaussian process (VNNGP), which introduces a prior that only retains correlations within 𝐾 nearest-neighboring observations, thereby inducing sparse precision structure. Using the variational framework, VNNGP's objective can be factorized over both observations and inducing points, enabling stochastic optimization with a time complexity of 𝑂(𝐾3). Hence, we can arbitrarily scale the inducing point size, even to the point of putting inducing points at every observed location. We compare VNNGP to other scalable GPs through various experiments, and demonstrate that VNNGP (1) can dramatically outperform low-rank methods, and (2) is less prone to overfitting than other nearest neighbor methods.},
   preview={vnngp-thumbnail.png},
   pdf={https://arxiv.org/pdf/2202.01694.pdf},
   talk={https://slideslive.com/38983939/vnngp-variational-nearest-neighbor-gaussian-process},
@@ -95,11 +124,7 @@
 @inproceedings{khalil2020variational,
   title={Variational Objectives for Markovian Dynamics with Backward Simulation},
   author={Khalil Moretti, Antonio and Wang, Zizhao and Wu, Luhuan and Drori, Iddo and Pe’er, Itsik},
-<<<<<<< HEAD
-  booktitle={ European Conference on Artificial Intelligence},
-=======
   booktitle={European Conference on Artificial Intelligence},
->>>>>>> b2a9266827cf51234750ba11562fa25fbc72e21a
   pages={1371--1378},
   year={2020},
   publisher={IOS Press},
