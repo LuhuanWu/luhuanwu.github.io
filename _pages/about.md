@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 #subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
@@ -31,4 +31,4 @@ I am an associate research scientist in the [Center for Computational Mathematic
 
 I did my Ph.D. in [Statistics](https://stat.columbia.edu/) at Columbia University, supervised by [John Cunningham](https://sites.stat.columbia.edu/cunningham/) and [David Blei](https://www.cs.columbia.edu/~blei/). Before that, I received an M.S. in [Data Science](https://datascience.columbia.edu/) also from Columbia, and a B.S. in [Mathematics](https://njunju.nju.edu.cn/EN/7f/77/c7136a163703/page.htm) from Nanjing University.
 
-Here is my [CV](../assets/pdf/LuhuanWu_CV.pdf).
+My research focuses on generative modeling, approximate inference, sampling and Bayesian methods. Here is my [CV](../assets/pdf/LuhuanWu_CV.pdf).
