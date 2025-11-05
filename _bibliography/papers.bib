@@ -13,7 +13,8 @@
   bibtex_show={true},
   abstract={We propose a novel sequential Monte Carlo (SMC) method for sampling from unnormalized target distributions based on a reverse denoising diffusion process. While recent diffusion-based samplers simulate the reverse diffusion using approximate score functions, they can suffer from accumulating errors due to time discretization and imperfect score estimation. In this work, we introduce a principled SMC framework that formalizes diffusion-based samplers as proposals while systematically correcting for their biases. The core idea is to construct informative intermediate target distributions that progressively steer the sampling trajectory toward the final target distribution. Although ideal intermediate targets are intractable, we develop exact approximations using quantities from the score estimation-based proposal, without requiring additional model training or inference overhead. The resulting sampler, termed RDSMC, enables consistent sampling and unbiased estimation of the target's normalization constant under mild conditions. We demonstrate the effectiveness of our method on a range of synthetic targets and real-world Bayesian inference problems.},
   pdf={https://arxiv.org/abs/2508.05926},
-  selected={true}
+  selected={true},
+  code={https://github.com/LuhuanWu/RDSMC}
 }
 
 @misc{wu2025bayesian,
@@ -23,13 +24,13 @@
   archivePrefix={arXiv}, 
   year={2025},
   primaryClass={stat.ML}, 
-  arxiv={2506.22675},
   additional_info={arXiv preprint},
 
   bibtex_show={true},
   abstract={Invariant prediction [Peters et al., 2016] analyzes feature/outcome data from multiple environments to identify invariant features - those with a stable predictive relationship to the outcome. Such features support generalization to new environments and help reveal causal mechanisms. Previous methods have primarily tackled this problem through hypothesis testing or regularized optimization. Here we develop Bayesian Invariant Prediction (BIP), a probabilistic model for invariant prediction. BIP encodes the indices of invariant features as a latent variable and recover them by posterior inference. Under the assumptions of Peters et al. [2016], the BIP posterior targets the true invariant features. We prove that the posterior is consistent and that greater environment heterogeneity leads to faster posterior contraction. To handle many features, we design an efficient variational approximation called VI-BIP. In simulations and real data, we find that BIP and VI-BIP are more accurate and scalable than existing methods for invariant prediction.},
   pdf={https://arxiv.org/abs/2506.22675},
-  selected={true}
+  selected={true},
+  code={https://github.com/LuhuanWu/BayesianInvariantPrediction}
 }
 
 @inproceedings{wu2024posterior,
