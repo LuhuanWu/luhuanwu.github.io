@@ -4,6 +4,19 @@
 #@string{aps = {American Physical Society,}}
 
 
+@article{li2026robust,
+  title={Robust Inference-Time Steering of Protein Diffusion Models via Embedding Optimization},
+  author={Li, Minhuan and Han, Jiequn and Cossio, Pilar and Wu, Luhuan},
+  journal={arXiv preprint arXiv:2602.05285},
+  year={2026},
+
+  bibtex_show={true},
+  abstract={A core challenge in structural biophysics is generating biomolecular conformations that are both physically plausible and consistent with experimental measurements. While sequence-to-structure diffusion models provide powerful priors, posterior sampling methods steer generation by perturbing atomic coordinates with gradients from experimental likelihoods. However, when the target lies in a low-density region of the prior, these methods require aggressive upweighting of the likelihood that can destabilize sampling and be sensitive to hyperparameters. We propose EmbedOpt, an inference-time steering framework that introduces an orthogonal optimization axis: rather than performing posterior sampling under a fixed prior, EmbedOpt directly optimizes the prior by updating the model's conditional embedding. This embedding space encodes rich coevolutionary signals, so optimizing it shifts the structural prior to align with experimental constraints. Empirically, EmbedOpt matches coordinate-based posterior sampling baselines on sparse distance constraints and outperforms them on cryo-electron microscopy map fitting, including real, noisy experimental ones. Furthermore, EmbedOpt's smooth optimization behavior yields robustness to hyperparameters spanning two orders of magnitude and enables comparable performance with fewer diffusion steps.},
+  pdf={https://arxiv.org/abs/2602.05285},
+  code={https://github.com/rs-station/embedopt},
+  selected={true}
+}
+
 @inproceedings{wu2025reverse,
   title={Reverse Diffusion Sequential Monte Carlo Samplers},
   author={Wu, Luhuan and Yi, Han and Naesseth, Christian and Cunningham, John},
