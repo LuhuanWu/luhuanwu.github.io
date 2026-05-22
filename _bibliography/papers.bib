@@ -27,7 +27,8 @@
   abstract={We propose a novel sequential Monte Carlo (SMC) method for sampling from unnormalized target distributions based on a reverse denoising diffusion process. While recent diffusion-based samplers simulate the reverse diffusion using approximate score functions, they can suffer from accumulating errors due to time discretization and imperfect score estimation. In this work, we introduce a principled SMC framework that formalizes diffusion-based samplers as proposals while systematically correcting for their biases. The core idea is to construct informative intermediate target distributions that progressively steer the sampling trajectory toward the final target distribution. Although ideal intermediate targets are intractable, we develop exact approximations using quantities from the score estimation-based proposal, without requiring additional model training or inference overhead. The resulting sampler, termed RDSMC, enables consistent sampling and unbiased estimation of the target's normalization constant under mild conditions. We demonstrate the effectiveness of our method on a range of synthetic targets and real-world Bayesian inference problems.},
   pdf={https://arxiv.org/abs/2508.05926},
   selected={true},
-  code={https://github.com/LuhuanWu/RDSMC}
+  code={https://github.com/LuhuanWu/RDSMC},
+  slides={slides_paper_rdsmc.pdf}
 }
 
 @misc{wu2025bayesian,
