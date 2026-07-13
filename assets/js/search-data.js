@@ -9,28 +9,19 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "Publications",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/publications/";
-          },
-        },{id: "books-the-godfather",
+  },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-started-as-an-assistant-professor-in-applied-mathematics-amp-amp-statistics-at-johns-hopkins-university",
+          title: 'Started as an Assistant Professor in Applied Mathematics &amp;amp;amp; Statistics at Johns Hopkins...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-co-organized-the-icml-2026-workshop-on-structured-probabilistic-inference-amp-amp-generative-modeling-in-seoul-south-korea-watch-the-recording-here",
+          title: 'Co-organized the ICML 2026 Workshop on Structured Probabilistic Inference &amp;amp;amp; Generative Modeling in...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-will-be-attending-and-giving-a-talk-at-the-msr-new-england-generative-modeling-and-sampling-summer-workshop-in-cambridge-ma",
+          title: 'Will be attending and giving a talk at the MSR New England Generative...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
@@ -97,6 +88,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=j7iGhYUAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/hlws_bot", "_blank");
         },
       },{
       id: 'light-theme',
