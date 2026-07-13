@@ -1,80 +1,148 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+<div class="al-home">
+  <!-- Left column: photo, name, affiliation, social links -->
+  <aside class="al-sidebar">
+    <div class="al-sidebar-inner">
+      {% if page.profile.image %}
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% if page.profile.image_circular %}
+          {% assign profile_image_class = 'al-photo img-fluid z-depth-1 rounded-circle' %}
+        {% else %}
+          {% assign profile_image_class = 'al-photo img-fluid z-depth-1 rounded' %}
+        {% endif %}
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt=page.profile.image
+          cache_bust=true
+        %}
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+      <h1 class="al-name">
+        {% if site.title == 'blank' %}
+          {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+
+      {% if page.profile.more_info %}
+        <div class="al-affil">{{ page.profile.more_info }}</div>
+      {% endif %}
+
+      {% if page.social %}
+        <div class="al-social contact-icons">
+          {% include social.liquid %}
+          {% if page.profile.cv_pdf %}
+            <a href="{{ page.profile.cv_pdf | relative_url }}" title="Curriculum Vitae"><i class="ai ai-cv"></i></a>
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+        </div>
+      {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+      <!-- Section-jump navigation -->
+      <nav class="al-toc">
+        <a href="#about">About Me</a>
+        <a href="#research">Research Themes</a>
+        {% if page.announcements and page.announcements.enabled %}
+          <a href="#news">News</a>
+        {% endif %}
+        {% if page.selected_papers %}
+          <a href="#publications">Selected Papers</a>
+        {% endif %}
+      </nav>
+
+      {% if site.enable_darkmode %}
+        <div class="al-theme-toggle">
+          <button id="light-toggle" title="Change theme">
+            <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+            <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+            <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+  </aside>
+
+  <!-- Right column: stacked content sections -->
+  <main class="al-content">
+    {{ content }}
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <h2 id="news">News</h2>
       {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-      </h2>
+      <h2 id="publications">Selected Papers</h2>
       {% include selected_papers.liquid %}
     {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+  </main>
 </div>
+
+<!-- Highlight the current section in the side nav as the reader scrolls -->
+<script>
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".al-toc a"));
+    var sections = links
+      .map(function (l) {
+        return { link: l, el: document.getElementById(l.getAttribute("href").slice(1)) };
+      })
+      .filter(function (s) {
+        return s.el;
+      });
+    if (!sections.length) return;
+
+    var OFFSET = 90; // px from the top that counts as "at the top"
+
+    // A click is authoritative: highlight the clicked item and pause the
+    // scroll-spy until the reader scrolls again. This avoids any dependence on
+    // exactly where the heading lands after the smooth scroll.
+    var locked = false;
+
+    function activate(link) {
+      links.forEach(function (l) {
+        l.classList.remove("active");
+      });
+      link.classList.add("active");
+    }
+
+    links.forEach(function (l) {
+      l.addEventListener("click", function () {
+        activate(this);
+        locked = true;
+      });
+    });
+
+    // Any real scroll gesture hands control back to the scroll-spy.
+    ["wheel", "touchmove", "keydown"].forEach(function (ev) {
+      window.addEventListener(
+        ev,
+        function () {
+          locked = false;
+        },
+        { passive: true }
+      );
+    });
+
+    function setActive() {
+      if (locked) return;
+      var current = sections[0];
+      // The current section is the last heading whose top has scrolled above the line.
+      sections.forEach(function (s) {
+        if (s.el.getBoundingClientRect().top - OFFSET <= 0) current = s;
+      });
+      // When the page is scrolled to the bottom, the last (short) section can't
+      // reach the top line — force it active so jumps to it highlight correctly.
+      if (window.innerHeight + Math.ceil(window.scrollY) >= document.documentElement.scrollHeight - 2) {
+        current = sections[sections.length - 1];
+      }
+      activate(current.link);
+    }
+
+    window.addEventListener("scroll", setActive, { passive: true });
+    window.addEventListener("resize", setActive);
+    setActive();
+  })();
+</script>

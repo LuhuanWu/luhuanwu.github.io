@@ -1,0 +1,50 @@
+/*******************************************************************************
+ * Typography — an elegant, readable vintage pairing:
+ *   Body     : Lora      (warm book serif with a tall x-height — reads clearly)
+ *   Headings : Fraunces  (characterful old-style display serif)
+ * To try a different pairing, change these two stacks and the `family=` list in
+ * `_config.yml` (site.third_party_libraries.google_fonts.url.fonts).
+ ******************************************************************************/
+
+$font-body: "Lora", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+$font-head: "Fraunces", "Lora", Georgia, "Times New Roman", serif;
+
+body {
+  font-family: $font-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-title,
+.al-name,
+.navbar-brand {
+  font-family: $font-head;
+}
+
+// Comfortable reading measure for the content column.
+.al-content {
+  font-size: 1.08rem;
+  line-height: 1.72;
+}
+
+// Inline highlight — brown accent (antique-gold in dark mode) for key phrases.
+.hl {
+  color: var(--global-theme-color);
+}
+
+// Selected papers: set the title in the heading face so it reads distinctly
+// from the (Lora) author list below it.
+.publications ol.bibliography li .title {
+  font-family: $font-head;
+  font-size: 1.14rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.15rem;
+}
