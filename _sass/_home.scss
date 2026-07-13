@@ -118,8 +118,13 @@ html {
   margin-top: 0.5rem;
   display: flex;
   justify-content: flex-start;
-  // Align the icon with the nav labels: nav links inset by a 2px border + 0.85rem.
-  padding-left: calc(0.85rem + 2px);
+  // Align the icon with the nav labels, which inset their text by a 2px border
+  // plus 0.85rem of padding. We mirror that box model rather than using
+  // calc(0.85rem + 2px): the production CSS minifier strips the spaces around
+  // the "+", producing invalid calc() that the browser ignores (which shifted
+  // the icon left on the deployed site only).
+  border-left: 2px solid transparent;
+  padding-left: 0.85rem;
 
   button {
     font-size: 1.1rem;
@@ -244,6 +249,7 @@ html {
   // Center the toggle with the stacked mobile layout instead of left-aligning.
   .al-theme-toggle {
     justify-content: center;
+    border-left: none;
     padding-left: 0;
   }
 }
