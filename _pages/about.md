@@ -36,7 +36,7 @@ My research focuses on generative modeling, sampling, probabilistic modeling, an
 
 Before JHU, I was an associate research scientist in the [Center for Computational Mathematics](https://www.simonsfoundation.org/flatiron/center-for-computational-mathematics/) at the Flatiron Institute. I did my Ph.D. in [Statistics](https://stat.columbia.edu/) at Columbia University, working with [John Cunningham](https://sites.stat.columbia.edu/cunningham/) and [David Blei](https://www.cs.columbia.edu/~blei/). Before that, I received an M.S. in [Data Science](https://datascience.columbia.edu/) also from Columbia, and a B.S. in [Mathematics](https://njunju.nju.edu.cn/EN/7f/77/c7136a163703/page.htm) from Nanjing University.
 
-*Prospective PhD students:* If you are interested in working with me and are a current or admitted student at JHU, please feel free to email me. Otherwise, consider applying to the [AMS graduate program](https://engineering.jhu.edu/ams/academics/graduate-studies/) or the [DSAI program](https://ai.jhu.edu/education/).
+_Prospective PhD students:_ If you are interested in working with me and are a current or admitted student at JHU, please feel free to email me. Otherwise, consider applying to the [AMS graduate program](https://engineering.jhu.edu/ams/academics/graduate-studies/) or the [DSAI program](https://ai.jhu.edu/education/).
 
 ## Research Themes {#research}
 
