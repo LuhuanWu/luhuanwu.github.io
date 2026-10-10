@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Co-organized the [ICML 2026 Workshop on Structured Probabilistic Inference & Generative Modeling](https://spigmworkshop2026.github.io/) in Seoul, South Korea; watch the recording [here](https://icml.cc/virtual/2026/workshop/54089).
+Co-organizer of the [ICML 2026 Workshop on Structured Probabilistic Inference & Generative Modeling](https://spigmworkshop2026.github.io/) in Seoul, South Korea; watch the recording [here](https://icml.cc/virtual/2026/workshop/54089).

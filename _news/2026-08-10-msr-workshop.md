@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Will be attending and giving a talk at the [MSR New England Generative Modeling and Sampling Summer Workshop](https://www.microsoft.com/en-us/research/event/msrne-generative-modeling-sampling-workshop/) in Cambridge, MA.
+Talk at the [MSR New England Generative Modeling and Sampling Summer Workshop](https://www.microsoft.com/en-us/research/event/msrne-generative-modeling-sampling-workshop/) in Cambridge, MA.

@@ -1,0 +1,8 @@
+---
+layout: post
+date: 2026-10-08 09:00:00-0400
+inline: true
+related_posts: false
+---
+
+Talk at the Johns Hopkins University Applied Mathematics and Statistics seminar.
