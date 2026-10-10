@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Talk at the Johns Hopkins University Electrical and Computer Engineering (ECE) seminar.
+Talk at the Johns Hopkins University Electrical and Computer Engineering seminar.
