@@ -52,6 +52,9 @@ html {
   width: 100%;
   max-width: 220px;
   height: auto;
+  aspect-ratio: 50 / 57;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .al-name {

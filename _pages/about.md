@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: left
-  image: LuhuanWu-Photo.JPG
+  image: Faculty_headshot_FY27-23.jpg
   image_circular: false # crops the image to make it circular
   cv_pdf: assets/pdf/LuhuanWu_CV.pdf # shows a CV icon next to the social links
   more_info: >
